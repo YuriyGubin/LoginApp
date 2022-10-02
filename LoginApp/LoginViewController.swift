@@ -20,6 +20,10 @@ class LoginViewController: UIViewController {
         welcomeVC.greeting = "Hi, \(username)!"
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     @IBAction func loginButtonTapped() {
         if usernameTF.text != username || passwordTF.text != password {
             showAlert(
@@ -28,7 +32,6 @@ class LoginViewController: UIViewController {
             )
         }
         passwordTF.text = ""
-        
     }
     
     @IBAction func hintUserName() {
@@ -41,10 +44,6 @@ class LoginViewController: UIViewController {
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         usernameTF.text = ""
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
     }
 }
 
