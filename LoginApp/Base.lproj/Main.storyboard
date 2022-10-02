@@ -33,7 +33,7 @@
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Gq-2p-1cq">
                                                         <rect key="frame" x="0.0" y="59" width="313" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -106,10 +106,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tdL-N5-AH9">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tdL-N5-AH9">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wjc-m7-zBt">
                                 <rect key="frame" x="161" y="209" width="71" height="36"/>
@@ -130,7 +129,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Log out"/>
+                                <state key="normal" title="Log out">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="KWY-J2-1OH" kind="unwind" unwindAction="unwindFor:" id="aai-la-0yr"/>
                                 </connections>
@@ -143,7 +144,11 @@
                             <constraint firstItem="wjc-m7-zBt" firstAttribute="centerX" secondItem="7AJ-ne-u3K" secondAttribute="centerX" id="6O2-7f-H4J"/>
                             <constraint firstItem="AOy-42-ogm" firstAttribute="centerX" secondItem="7AJ-ne-u3K" secondAttribute="centerX" id="MSm-5W-2Ua"/>
                             <constraint firstItem="8Ll-fV-gIc" firstAttribute="centerX" secondItem="7AJ-ne-u3K" secondAttribute="centerX" id="Rez-Qa-wTm"/>
+                            <constraint firstItem="tdL-N5-AH9" firstAttribute="leading" secondItem="dpa-Bf-5dg" secondAttribute="leading" id="WVS-H3-1gu"/>
+                            <constraint firstItem="tdL-N5-AH9" firstAttribute="trailing" secondItem="dpa-Bf-5dg" secondAttribute="trailing" id="Y5V-s6-y37"/>
+                            <constraint firstAttribute="bottom" secondItem="tdL-N5-AH9" secondAttribute="bottom" id="dGS-a8-LoX"/>
                             <constraint firstItem="AOy-42-ogm" firstAttribute="top" secondItem="wjc-m7-zBt" secondAttribute="bottom" constant="40" id="hKY-Y0-9Eq"/>
+                            <constraint firstItem="tdL-N5-AH9" firstAttribute="top" secondItem="7AJ-ne-u3K" secondAttribute="top" id="hNt-xK-p2d"/>
                             <constraint firstItem="dpa-Bf-5dg" firstAttribute="bottom" secondItem="8Ll-fV-gIc" secondAttribute="bottom" constant="150" id="iyi-sE-aRn"/>
                         </constraints>
                     </view>
