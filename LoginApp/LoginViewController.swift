@@ -12,7 +12,7 @@ class LoginViewController: UIViewController {
     @IBOutlet var usernameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    let username = "111"
+    let username = "ios"
     let password = "222"
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
