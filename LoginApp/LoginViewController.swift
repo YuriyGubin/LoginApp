@@ -9,11 +9,11 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    let username = "swift"
-    let password = "12345"
-    
     @IBOutlet var usernameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
+    
+    let username = "swift"
+    let password = "12345"
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
@@ -22,7 +22,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButtonTapped() {
         if usernameTF.text != username || passwordTF.text != password {
-            showAlert(title: "Invalid login or password", message: "Enter correct login and password")
+            showAlert(title: "Invalid login or password ", message: "Enter correct login and password")
         }
         passwordTF.text = ""
     }
@@ -33,6 +33,10 @@ class LoginViewController: UIViewController {
     
     @IBAction func hintPassword() {
         showAlert(title: "Hey there 👋", message: "Your password: \(password)")
+    }
+    
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        usernameTF.text = ""
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
