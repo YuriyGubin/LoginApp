@@ -118,6 +118,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ll-fV-gIc">
+                                <rect key="frame" x="151.66666666666666" y="632" width="90" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="E7j-aT-KjW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Log out"/>
+                                <connections>
+                                    <action selector="logoutButtonTapped" destination="tOq-mw-dRR" eventType="touchUpInside" id="4uK-qr-5f0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dpa-Bf-5dg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -125,9 +137,14 @@
                             <constraint firstItem="wjc-m7-zBt" firstAttribute="top" secondItem="dpa-Bf-5dg" secondAttribute="top" constant="150" id="4jn-J2-nUP"/>
                             <constraint firstItem="wjc-m7-zBt" firstAttribute="centerX" secondItem="7AJ-ne-u3K" secondAttribute="centerX" id="6O2-7f-H4J"/>
                             <constraint firstItem="AOy-42-ogm" firstAttribute="centerX" secondItem="7AJ-ne-u3K" secondAttribute="centerX" id="MSm-5W-2Ua"/>
+                            <constraint firstItem="8Ll-fV-gIc" firstAttribute="centerX" secondItem="7AJ-ne-u3K" secondAttribute="centerX" id="Rez-Qa-wTm"/>
                             <constraint firstItem="AOy-42-ogm" firstAttribute="top" secondItem="wjc-m7-zBt" secondAttribute="bottom" constant="40" id="hKY-Y0-9Eq"/>
+                            <constraint firstItem="dpa-Bf-5dg" firstAttribute="bottom" secondItem="8Ll-fV-gIc" secondAttribute="bottom" constant="150" id="iyi-sE-aRn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="welcomeLabel" destination="wjc-m7-zBt" id="r6l-LJ-9dQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LXS-92-2Di" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

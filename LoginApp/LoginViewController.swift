@@ -15,6 +15,11 @@ class LoginViewController: UIViewController {
     @IBOutlet var usernameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+        welcomeVC.greeting = "Hi, \(username)!"
+    }
+    
     @IBAction func loginButtonTapped() {
         if usernameTF.text != username || passwordTF.text != password {
             showAlert(title: "Invalid login or password", message: "Enter correct login and password")
