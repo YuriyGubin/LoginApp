@@ -26,8 +26,8 @@ final class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        welcomeLabel.text = greeting
-        gradient.frame = backgroundView.bounds
-        backgroundView.layer.addSublayer(gradient)
+        welcomeLabel.text = "Welcome, \(greeting ?? "k")"
+        gradient.frame = view.bounds
+        view.layer.addSublayer(gradient)
     }
 }

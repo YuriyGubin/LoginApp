@@ -17,7 +17,7 @@ class LoginViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.greeting = "Hi, \(username)!"
+        welcomeVC.greeting = username
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -35,13 +35,14 @@ class LoginViewController: UIViewController {
         passwordTF.text = ""
     }
     
-    @IBAction func hintUserName() {
-        showAlert(title: "Hey there 👋", message: "Your name: \(username)")
+    @IBAction func forgotButtons(_ sender: UIButton) {
+        if sender.tag == 0 {
+            showAlert(title: "Hey there 👋", message: "Your name: \(username)")
+        } else {
+            showAlert(title: "Hey there 👋", message: "Your password: \(password)")
+        }
     }
     
-    @IBAction func hintPassword() {
-        showAlert(title: "Hey there 👋", message: "Your password: \(password)")
-    }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         usernameTF.text = ""
@@ -55,7 +56,9 @@ extension LoginViewController {
             message: message,
             preferredStyle: .alert
         )
-        let okAction = UIAlertAction(title: "OK", style: .default)
+        let okAction = UIAlertAction(title: "OK", style: .default) {_ in
+            passwordTF?.text = ""
+        }
         alert.addAction(okAction)
         present(alert, animated: true)
     }
