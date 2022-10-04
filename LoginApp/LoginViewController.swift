@@ -26,38 +26,39 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButtonTapped() {
-        if usernameTF.text != username || passwordTF.text != password {
+        guard usernameTF.text == username, passwordTF.text == password else {
             showAlert(
                 title: "Invalid login or password 😎",
-                message: "Please, enter correct login and password"
+                message: "Please, enter correct login and password",
+                textField: passwordTF
             )
+            return
         }
-        passwordTF.text = ""
+        performSegue(withIdentifier: "showWelcomeVC", sender: nil)
     }
     
     @IBAction func forgotButtons(_ sender: UIButton) {
-        if sender.tag == 0 {
-            showAlert(title: "Hey there 👋", message: "Your name: \(username)")
-        } else {
-            showAlert(title: "Hey there 👋", message: "Your password: \(password)")
-        }
+        sender.tag == 0
+        ? showAlert(title: "Hey there 👋", message: "Your name: \(username)")
+        : showAlert(title: "Hey there 👋", message: "Your password: \(password)")
     }
     
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         usernameTF.text = ""
+        passwordTF.text = ""
     }
 }
 
 extension LoginViewController {
-    private func showAlert(title: String, message: String) {
+    private func showAlert(title: String, message: String, textField: UITextField? = nil) {
         let alert = UIAlertController(
             title: title,
             message: message,
             preferredStyle: .alert
         )
-        let okAction = UIAlertAction(title: "OK", style: .default) {_ in
-            passwordTF?.text = ""
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            textField?.text = ""
         }
         alert.addAction(okAction)
         present(alert, animated: true)
