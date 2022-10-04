@@ -102,14 +102,10 @@
         <scene sceneID="TMz-RQ-dkc">
             <objects>
                 <viewController id="tOq-mw-dRR" customClass="WelcomeViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7AJ-ne-u3K">
+                    <view key="view" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" id="7AJ-ne-u3K">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tdL-N5-AH9">
-                                <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wjc-m7-zBt">
                                 <rect key="frame" x="179.66666666666666" y="209" width="71" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -138,22 +134,17 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dpa-Bf-5dg"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="wjc-m7-zBt" firstAttribute="top" secondItem="dpa-Bf-5dg" secondAttribute="top" constant="150" id="4jn-J2-nUP"/>
                             <constraint firstItem="wjc-m7-zBt" firstAttribute="centerX" secondItem="7AJ-ne-u3K" secondAttribute="centerX" id="6O2-7f-H4J"/>
                             <constraint firstItem="AOy-42-ogm" firstAttribute="centerX" secondItem="7AJ-ne-u3K" secondAttribute="centerX" id="MSm-5W-2Ua"/>
                             <constraint firstItem="8Ll-fV-gIc" firstAttribute="centerX" secondItem="7AJ-ne-u3K" secondAttribute="centerX" id="Rez-Qa-wTm"/>
-                            <constraint firstItem="tdL-N5-AH9" firstAttribute="leading" secondItem="dpa-Bf-5dg" secondAttribute="leading" id="WVS-H3-1gu"/>
-                            <constraint firstItem="tdL-N5-AH9" firstAttribute="trailing" secondItem="dpa-Bf-5dg" secondAttribute="trailing" id="Y5V-s6-y37"/>
-                            <constraint firstAttribute="bottom" secondItem="tdL-N5-AH9" secondAttribute="bottom" id="dGS-a8-LoX"/>
                             <constraint firstItem="AOy-42-ogm" firstAttribute="top" secondItem="wjc-m7-zBt" secondAttribute="bottom" constant="40" id="hKY-Y0-9Eq"/>
-                            <constraint firstItem="tdL-N5-AH9" firstAttribute="top" secondItem="7AJ-ne-u3K" secondAttribute="top" id="hNt-xK-p2d"/>
                             <constraint firstItem="dpa-Bf-5dg" firstAttribute="bottom" secondItem="8Ll-fV-gIc" secondAttribute="bottom" constant="150" id="iyi-sE-aRn"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="backgroundView" destination="tdL-N5-AH9" id="ENk-Lp-aSZ"/>
                         <outlet property="welcomeLabel" destination="wjc-m7-zBt" id="r6l-LJ-9dQ"/>
                     </connections>
                 </viewController>
@@ -166,9 +157,6 @@
     <resources>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
