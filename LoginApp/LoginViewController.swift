@@ -26,6 +26,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButtonTapped() {
+        
         guard usernameTF.text == username, passwordTF.text == password else {
             showAlert(
                 title: "Invalid login or password 😎",
@@ -38,6 +39,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func forgotButtons(_ sender: UIButton) {
+        
         sender.tag == 0
         ? showAlert(title: "Hey there 👋", message: "Your name: \(username)")
         : showAlert(title: "Hey there 👋", message: "Your password: \(password)")
@@ -45,6 +47,7 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
+        
         usernameTF.text = ""
         passwordTF.text = ""
     }
