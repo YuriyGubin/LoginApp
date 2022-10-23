@@ -41,8 +41,8 @@ class LoginViewController: UIViewController {
     @IBAction func forgotButtons(_ sender: UIButton) {
         
         sender.tag == 0
-        ? showAlert(title: "Hey there 👋", message: "Your name: \(username)")
-        : showAlert(title: "Hey there 👋", message: "Your password: \(password)")
+        ? showAlert(title: "Hey there! 👋", message: "Your name: \(username)")
+        : showAlert(title: "Hey there! 👋", message: "Your password: \(password)")
     }
     
     

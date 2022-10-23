@@ -14,6 +14,7 @@ final class WelcomeViewController: UIViewController {
     var greeting = ""
 
     private var gradient: CAGradientLayer = {
+        
         let gradient = CAGradientLayer()
         gradient.colors = [
             #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1).cgColor,
