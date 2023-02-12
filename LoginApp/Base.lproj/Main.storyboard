@@ -25,12 +25,12 @@
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IB8-wu-F2L">
                                                 <rect key="frame" x="0.0" y="0.0" width="295" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" smartInsertDeleteType="no" textContentType="name"/>
+                                                <textInputTraits key="textInputTraits" smartDashesType="no" smartInsertDeleteType="no" textContentType="name"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Je6-H9-bKZ">
                                                 <rect key="frame" x="0.0" y="54" width="295" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" smartInsertDeleteType="no"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no"/>
                                             </textField>
                                         </subviews>
                                     </stackView>

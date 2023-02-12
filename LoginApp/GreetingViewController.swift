@@ -13,7 +13,6 @@ final class GreetingViewController: UIViewController {
     @IBOutlet var greetingLabel: UILabel!
     
     private var gradient: CAGradientLayer = {
-        
         let gradient = CAGradientLayer()
         gradient.colors = [
             #colorLiteral(red: 1, green: 0.5301271778, blue: 0.7130295974, alpha: 1).cgColor,

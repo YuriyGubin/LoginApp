@@ -14,11 +14,7 @@ class LogInViewController: UIViewController {
     
     private let userName = "123"
     private let password = "123"
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
@@ -39,11 +35,17 @@ class LogInViewController: UIViewController {
     }
     
     @IBAction func forgotUserNameButtonPressed() {
-        showAlert(withTitle: "Your User Name is: \(userName)", andMessage: "Remember this already, please!")
+        showAlert(
+            withTitle: "Your User Name is: \(userName)",
+            andMessage: "Remember this already, please!"
+        )
     }
     
     @IBAction func forgotPasswordButtonPressed() {
-        showAlert(withTitle: "Your Password is: \(password)", andMessage: "Remember this already, please!")
+        showAlert(
+            withTitle: "Your Password is: \(password)",
+            andMessage: "Remember this already, please!"
+        )
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
@@ -56,7 +58,11 @@ class LogInViewController: UIViewController {
 
 extension LogInViewController {
     private func showAlert(withTitle title: String, andMessage message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alert = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert
+        )
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
             self.userNameTF.text = ""
             self.passwordTF.text = ""
