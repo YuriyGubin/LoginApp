@@ -21,6 +21,11 @@ class LogInViewController: UIViewController {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let greetingVC = segue.destination as? GreetingViewController else { return }
+        greetingVC.userName = userNameTF.text ?? ""
+    }
 
     @IBAction func logInButtonPressed() {
     }
@@ -29,6 +34,12 @@ class LogInViewController: UIViewController {
     }
     
     @IBAction func forgotPasswordButtonPressed() {
+    }
+    
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        guard segue.source is GreetingViewController else { return }
+        userNameTF.text = ""
+        passwordTF.text = ""
     }
     
 }
