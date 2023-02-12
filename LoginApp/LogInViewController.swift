@@ -13,6 +13,9 @@ class LogInViewController: UIViewController {
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
+    private let userName = "123"
+    private let password = "123"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -28,12 +31,20 @@ class LogInViewController: UIViewController {
     }
 
     @IBAction func logInButtonPressed() {
+        if userNameTF.text != userName || passwordTF.text != password {
+            showAlert(
+                withTitle: "Wrong User Name or Password 😎",
+                andMessage: "Enter correct User Name and Password, please!"
+            )
+        }
     }
     
     @IBAction func forgotUserNameButtonPressed() {
+        showAlert(withTitle: "Your User Name is: \(userName)", andMessage: "Remember this already, please!")
     }
     
     @IBAction func forgotPasswordButtonPressed() {
+        showAlert(withTitle: "Your Password is: \(password)", andMessage: "Remember this already, please!")
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
@@ -42,5 +53,14 @@ class LogInViewController: UIViewController {
         passwordTF.text = ""
     }
     
+}
+
+extension LogInViewController {
+    private func showAlert(withTitle title: String, andMessage message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
 }
 
