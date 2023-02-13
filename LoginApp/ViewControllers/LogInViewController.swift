@@ -13,7 +13,7 @@ class LogInViewController: UIViewController {
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    private let userName = "123"
+    private let userName = "Юрий Губин"
     private let password = "123"
     
     override func viewDidLoad() {
@@ -29,8 +29,17 @@ class LogInViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let greetingVC = segue.destination as? GreetingViewController else { return }
-        greetingVC.userName = userNameTF.text ?? ""
+//        guard let greetingVC = segue.destination as? GreetingViewController else { return }
+//        greetingVC.userName = userNameTF.text ?? ""
+        
+        guard let tabBarVC = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarVC.viewControllers else { return }
+        
+        viewControllers.forEach { viewController in
+            if let greetingVC = viewController as? GreetingViewController {
+                greetingVC.userName = userNameTF.text ?? ""
+            }
+        }
     }
     
     // MARK: - IBActions
