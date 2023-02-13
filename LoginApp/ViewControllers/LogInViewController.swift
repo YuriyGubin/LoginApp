@@ -13,13 +13,12 @@ class LogInViewController: UIViewController {
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    private let userName = "Юрий Губин"
-    private let password = "123"
+    let user = UserInfo.getUserInfo()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        userNameTF.text = userName
-        passwordTF.text = password
+        userNameTF.text = user.fullName
+        passwordTF.text = user.password
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -29,22 +28,23 @@ class LogInViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard let greetingVC = segue.destination as? GreetingViewController else { return }
-//        greetingVC.userName = userNameTF.text ?? ""
         
         guard let tabBarVC = segue.destination as? UITabBarController else { return }
         guard let viewControllers = tabBarVC.viewControllers else { return }
         
         viewControllers.forEach { viewController in
             if let greetingVC = viewController as? GreetingViewController {
-                greetingVC.userName = userNameTF.text ?? ""
+                greetingVC.userInfo = user
+            } else if let aboutMeVC = viewController as? UINavigationController {
+                guard let aboutVC = aboutMeVC.topViewController as? AboutMeViewController else { return }
+                aboutVC.userInfo = user
             }
         }
     }
     
     // MARK: - IBActions
     @IBAction func logInButtonPressed() {
-        guard userNameTF.text == userName, passwordTF.text == password else {
+        guard userNameTF.text == user.fullName, passwordTF.text == user.password else {
             showAlert(
                 withTitle: "Wrong User Name or Password 😎",
                 andMessage: "Enter correct User Name and Password, please!",
@@ -58,11 +58,11 @@ class LogInViewController: UIViewController {
     @IBAction func forgotDataButtonsPressed(_ sender: UIButton) {
         sender.tag == 0
         ? showAlert(
-            withTitle: "Your User Name is: \(userName)",
+            withTitle: "Your User Name is: \(user.fullName)",
             andMessage: "Remember this already, please!"
         )
         : showAlert(
-            withTitle: "Your Password is: \(password)",
+            withTitle: "Your Password is: \(user.password)",
             andMessage: "Remember this already, please!"
         )
     }

@@ -11,6 +11,7 @@
 		6ABC517B299A5B4000DB9506 /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABC517A299A5B4000DB9506 /* AboutMeViewController.swift */; };
 		6ABC517D299A5BEA00DB9506 /* BioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABC517C299A5BEA00DB9506 /* BioViewController.swift */; };
 		6ABC517F299A5C9900DB9506 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABC517E299A5C9900DB9506 /* TabBarViewController.swift */; };
+		6ABC5182299A652B00DB9506 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABC5181299A652B00DB9506 /* UserInfo.swift */; };
 		6AFD47AD2998B7F3008706F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFD47AC2998B7F3008706F4 /* AppDelegate.swift */; };
 		6AFD47AF2998B7F3008706F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFD47AE2998B7F3008706F4 /* SceneDelegate.swift */; };
 		6AFD47B12998B7F3008706F4 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFD47B02998B7F3008706F4 /* LogInViewController.swift */; };
@@ -25,6 +26,7 @@
 		6ABC517A299A5B4000DB9506 /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
 		6ABC517C299A5BEA00DB9506 /* BioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioViewController.swift; sourceTree = "<group>"; };
 		6ABC517E299A5C9900DB9506 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		6ABC5181299A652B00DB9506 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		6AFD47A92998B7F3008706F4 /* LoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AFD47AC2998B7F3008706F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AFD47AE2998B7F3008706F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		6ABC5180299A650A00DB9506 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6ABC5181299A652B00DB9506 /* UserInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		6AFD47A02998B7F3008706F4 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +115,7 @@
 		6AFD47AB2998B7F3008706F4 /* LoginApp */ = {
 			isa = PBXGroup;
 			children = (
+				6ABC5180299A650A00DB9506 /* Model */,
 				6A20906D299A577300200B11 /* Views */,
 				6A20906A299A565300200B11 /* App */,
 				6A20906B299A567000200B11 /* ViewControllers */,
@@ -192,6 +203,7 @@
 				6A20906F299A578A00200B11 /* GradientViewController.swift in Sources */,
 				6AFD47AF2998B7F3008706F4 /* SceneDelegate.swift in Sources */,
 				6ABC517B299A5B4000DB9506 /* AboutMeViewController.swift in Sources */,
+				6ABC5182299A652B00DB9506 /* UserInfo.swift in Sources */,
 				6AFD47C12998C7C9008706F4 /* GreetingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
