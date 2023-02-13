@@ -128,7 +128,7 @@
                                     <color key="titleColor" systemColor="systemBackgroundColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="mDO-iT-IVt" kind="unwind" unwindAction="unwindFor:" id="P7u-rv-ZOF"/>
+                                    <action selector="logOutButtonPressed" destination="6FH-OM-xen" eventType="touchUpInside" id="hsZ-ja-kA0"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -150,7 +150,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vwX-tb-hho" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="mDO-iT-IVt" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2351.1999999999998" y="697.60119940029995"/>
         </scene>
@@ -268,7 +267,7 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="nameLabel" destination="BPw-tC-nQq" id="YLY-XJ-AHa"/>
+                        <outlet property="photoImage" destination="Z69-RE-Ban" id="4mL-JG-psA"/>
                         <outletCollection property="infoLabels" destination="BPw-tC-nQq" collectionClass="NSMutableArray" id="JeG-iT-Fh2"/>
                         <outletCollection property="infoLabels" destination="QBF-Lu-ifn" collectionClass="NSMutableArray" id="9ma-q6-lTZ"/>
                         <outletCollection property="infoLabels" destination="Qf6-aX-wW1" collectionClass="NSMutableArray" id="ofJ-bR-mrl"/>
@@ -287,10 +286,26 @@
                     <view key="view" contentMode="scaleToFill" id="Qsw-Si-qXh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5im-Qw-H1X">
+                                <rect key="frame" x="16" y="126" width="343" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Mz7-1Y-GNk"/>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Mz7-1Y-GNk" firstAttribute="trailing" secondItem="5im-Qw-H1X" secondAttribute="trailing" constant="16" id="5B2-TT-t2D"/>
+                            <constraint firstItem="5im-Qw-H1X" firstAttribute="top" secondItem="Mz7-1Y-GNk" secondAttribute="top" constant="30" id="Kef-Tj-Nva"/>
+                            <constraint firstItem="5im-Qw-H1X" firstAttribute="leading" secondItem="Mz7-1Y-GNk" secondAttribute="leading" constant="16" id="QJ0-WM-rV8"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="QLA-Yp-7dF"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="5im-Qw-H1X" id="cwS-7x-aNg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pSy-3o-Fjq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -323,6 +338,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="II4-4e-d2K">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" systemColor="systemBackgroundColor"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
