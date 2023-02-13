@@ -39,12 +39,19 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i27-16-fNN">
                                                 <rect key="frame" x="0.0" y="0.0" width="295" height="39"/>
+                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="Log In"/>
+                                                <state key="normal" title="Log In">
+                                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="logInButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="LL8-C5-CV7"/>
-                                                    <segue destination="6FH-OM-xen" kind="presentation" modalPresentationStyle="fullScreen" id="afq-dV-StC"/>
                                                 </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="pZt-eh-9nh">
@@ -56,16 +63,16 @@
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Forgot User Name?"/>
                                                         <connections>
-                                                            <action selector="forgotUserNameButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="QSI-AP-l1i"/>
+                                                            <action selector="forgotDataButtonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XIg-Jv-ema"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbi-cH-feH">
+                                                    <button opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbi-cH-feH">
                                                         <rect key="frame" x="194" y="0.0" width="101" height="39"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Forgot Password?"/>
                                                         <connections>
-                                                            <action selector="forgotPasswordButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="1RS-cs-7B1"/>
+                                                            <action selector="forgotDataButtonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V9n-hT-TNo"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -86,6 +93,7 @@
                     <connections>
                         <outlet property="passwordTF" destination="Je6-H9-bKZ" id="dag-iY-gJp"/>
                         <outlet property="userNameTF" destination="IB8-wu-F2L" id="fCa-9r-6ge"/>
+                        <segue destination="6FH-OM-xen" kind="presentation" identifier="showWelcomeVC" modalPresentationStyle="fullScreen" id="6bj-cn-Hbc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -152,6 +160,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
