@@ -7,10 +7,6 @@
 
 import UIKit
 
-class GradientViewController: UIViewController {
-
-}
-
 // MARK: - Set background color
 extension UIView {
     func addVerticalGradient(topColor: UIColor, bottomColor: UIColor) {
