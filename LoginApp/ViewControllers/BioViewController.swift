@@ -9,7 +9,6 @@ import UIKit
 
 class BioViewController: UIViewController {
     
-    
     @IBOutlet var descriptionLabel: UILabel!
     
     private let firstColor = #colorLiteral(red: 1, green: 0.5301271778, blue: 0.7130295974, alpha: 1)

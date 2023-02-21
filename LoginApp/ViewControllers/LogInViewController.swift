@@ -64,8 +64,6 @@ class LogInViewController: UIViewController {
             andMessage: "Remember this already, please!"
         )
     }
-    
-    
 }
 
 // MARK: - Set Alert
